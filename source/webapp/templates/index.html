@@ -1,30 +1,42 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block menu %}
-    <li><a href="{% url 'task_add' %}">Add New Task (+)</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link new_review_btn" href="">+ Add Product <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 {% endblock %}
 {% block content %}
-    <h1>Tasks:</h1>
+    <h1 class="main_header">Amazon Products</h1>
     <hr/>
-    {% for task in tasks %}
-        <div class="card border-dark mb-3 my_card" style="width: 18rem;">
-                <img src="{}" class="card-img-top" alt="...">
-                <div class="card-body d-flex flex-column">
-                    <div class="my_card_body mt-auto"
-                        <h5 class="card-title">{}</h5>
-                        <p class="card-text">${}</p>
-                        <a href="/car?id={}" class="btn btn-dark">Check it out!</a>
+    <div class="row justify-content-center">
+        {% for good in goods %}
+            <div class="card border-dark mb-3 my_card" style="width: 18rem;">
+                <div class="card-body d-flex flex-column" >
+                    <h5 class="card-title card_names">{{ good.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Category: {{ good.category }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Left in Stock: {{ good.strock }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Price: {{ good.strock }}</h6>
+                    <p class="card-text">{{ good.description }}</p>
+                    <div class="card_links mt-auto row justify-content-center">
+                        <a href="" class="edit_icon"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="" class="card-link trash_can"><i class="fas fa-trash-alt"></i></a>
                     </div>
                 </div>
-        </div>
-{#        <h2>{{ task.description }}</h2>#}
-{#        <div>#}
-{#            <p>Status: <b>{{ task.status }}</b></p>#}
-{#            <p>Finish Date: <b>{{ task.finish_date }}</b></p>#}
-{#            <p><a href="{% url 'task_view' task.pk %}">More...</a></p>#}
-{#            <p><a href="{% url 'task_update' task.pk %}">Edit</a></p>#}
-{#            <p><a href="{% url 'task_delete' task.pk %}">Delete</a></p>#}
-{#        </div>#}
-{#        <hr/>#}
-    {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
