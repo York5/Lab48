@@ -12,6 +12,16 @@ def index_goods_view(request, *args, **kwargs):
     })
 
 
+def single_good_view(request, pk):
+    try:
+        good = get_object_or_404(Good, pk=pk)
+    except Good.DoesNotExist:
+        raise Http404
+    return render(request, 'good.html', context={
+        'good': good
+    })
+
+
 def good_create_view(request, *args, **kwargs):
     if request.method == 'GET':
         form = GoodForm()
