@@ -32,7 +32,7 @@
                     <h5 class="card-subtitle mb-2">Price: {{ good.price }}</h5>
                     <p class="card-text">{{ good.description }}</p>
                     <div class="card_links mt-auto row justify-content-center">
-                        <a href="" class="edit_icon"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="{% url "good_edit" good.pk %}" class="edit_icon"><i class="fas fa-pencil-alt"></i></a>
                         <a href="" class="card-link trash_can"><i class="fas fa-trash-alt"></i></a>
                     </div>
                 </div>

@@ -38,3 +38,24 @@ def good_create_view(request, *args, **kwargs):
             return redirect('index')
         else:
             return render(request, 'create.html', context={'form': form})
+
+
+def good_edit_view(request, pk):
+    good = get_object_or_404(Good, pk=pk)
+    if request.method == 'GET':
+        form = GoodForm(data={'name': good.name, 'description': good.description, 'category': good.category, 'stock': good.stock,
+                              'price': good.price})
+        return render(request, 'edit.html', context={'form': form, 'good': good})
+    elif request.method == 'POST':
+        form = GoodForm(data=request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            good.name = data['name']
+            good.description = data['description']
+            good.category = data['category']
+            good.stock = data['stock']
+            good.price = data['price']
+            good.save()
+            return redirect('index')
+        else:
+            return render(request, 'edit.html', context={'form': form, 'good': good})
