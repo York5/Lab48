@@ -1,0 +1,86 @@
+[
+{
+  "model": "webapp.good",
+  "pk": 1,
+  "fields": {
+    "name": "Wool Fedora",
+    "description": "100% Wool. Imported Size Adjustable - medium best fits 55-57.5cm 21.6\"-22.6\"; large best fits 58-60cm 22.8\"-23.6\" 100% pure crushable wool - keep its shape,but a little on the soft side. Perfect for casual wear, great fedoras for concert and the like occasions. Stylish Fedora - provides a little bit of coverage from wind, rain, and cold. Unisex Styling - looks great on men and women.",
+    "category": "fashion",
+    "stock": 54,
+    "price": "18.00"
+  }
+},
+{
+  "model": "webapp.good",
+  "pk": 2,
+  "fields": {
+    "name": "Boxing gloves",
+    "description": "Brand: Adidas Targeted Group: Unisex Gloves Type: Full Finger Gloves Sports Type: Boxing Color: Black Size: 10 oz Padding: yes EAN-13: 3700378383992",
+    "category": "sports",
+    "stock": 120,
+    "price": "25.00"
+  }
+},
+{
+  "model": "webapp.good",
+  "pk": 3,
+  "fields": {
+    "name": "Lego Imperial Star Destroyer",
+    "description": "With over 4,700 LEGO pieces, this Ultimate Collector Series 75252 Imperial Star Destroyer model captures all the authentic details of the starship as it appeared in the opening scene of Star Wars: A New Hope, including swiveling guns, a tilting radar dish, huge engine exhausts, intricate surface detailing and of course a buildable scale version of the Rebels' Tantive IV starship to chase down.",
+    "category": "toys",
+    "stock": 43,
+    "price": "800.00"
+  }
+},
+{
+  "model": "webapp.good",
+  "pk": 4,
+  "fields": {
+    "name": "Tesla Model X charger",
+    "description": "The Mobile Connector is included as standard equipment with a new Tesla. It\u2019s a compact bundle that can charge your car from different outlets at medium to low speeds. We recommend installing a Wall Connector at home and leaving the Tesla Mobile Connector in the trunk of the car as a backup option while traveling.",
+    "category": "automotive",
+    "stock": 15,
+    "price": "150.00"
+  }
+},
+{
+  "model": "webapp.good",
+  "pk": 5,
+  "fields": {
+    "name": "Iphone 11",
+    "description": "The iPhone 11 is a smartphones designed, developed and marketed by Apple Inc. It is the 13th-generation flagship of the iPhone, succeeding the iPhone XR.",
+    "category": "electronics",
+    "stock": 12,
+    "price": "850.00"
+  }
+},
+{
+  "model": "webapp.good",
+  "pk": 7,
+  "fields": {
+    "name": "Test Product 3",
+    "description": "Some random description for test product 3",
+    "category": "electronics",
+    "stock": 5,
+    "price": "399.00"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$ImzStGNKtuqn$1fo/taHeMrD9FvmbiMoV7JEcJGQeiqdk2EAQ8RFE10g=",
+    "last_login": "2019-09-23T20:53:12.927Z",
+    "is_superuser": true,
+    "username": "mike",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-23T20:52:54.055Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

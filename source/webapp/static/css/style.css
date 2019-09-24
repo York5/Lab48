@@ -1,6 +1,23 @@
 body {
     font-family: Arial, sans-serif;
 }
+.custom_nav {
+    background-color:  #00004d;
+}
+.new_review_btn{
+    font-size: 20px;
+    margin-left: 20px;
+}
+.new_nav_btn {
+    color: white;
+}
+.my_logo {
+    margin-left: auto;
+    margin-right: auto;
+}
+.my_logo img {
+    margin-top: 20px;
+}
 .main_header {
     text-align: center;
     margin-top: 30px;
@@ -26,17 +43,13 @@ body {
     font-size: 30px;
 }
 .edit_icon {
-    color: #212529
+    color: #00004d;
 }
 .card_links a:hover{
     color: dimgrey;
 }
 .trash_can {
-    color:#660000;
-}
-.new_review_btn{
-    font-size: 20px;
-    margin-left: 20px;
+    color:#ff6600;
 }
 .delete_header {
     margin-top: 100px;
@@ -65,8 +78,4 @@ body {
     margin-left: auto;
     margin-top: 30px
 }
-.my_footer {
-    background-color: #212529;
-    color: white;
-    margin-top: 100px;
-}
+
