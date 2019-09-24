@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from webapp.views import index_goods_view, good_create_view, single_good_view, good_edit_view
+from webapp.views import index_goods_view, good_create_view, single_good_view, good_edit_view, good_delete_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,6 +23,6 @@ urlpatterns = [
     path('good/add/', good_create_view, name='good_add'),
     path('good/<int:pk>', single_good_view, name='good_view'),
     path('good/<int:pk>/edit/', good_edit_view, name='good_edit'),
-    # path('good/<int:pk>/delete/', good_delete_view, name='good_delete')
+    path('good/<int:pk>/delete/', good_delete_view, name='good_delete')
     # path('good/<category>', good_category_view, name='category_view'),
 ]

@@ -59,3 +59,12 @@ def good_edit_view(request, pk):
             return redirect('index')
         else:
             return render(request, 'edit.html', context={'form': form, 'good': good})
+
+
+def good_delete_view(request, pk):
+    good = get_object_or_404(Good, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'delete.html', context={'good': good})
+    elif request.method == 'POST':
+        good.delete()
+        return redirect('index')
